@@ -135,10 +135,11 @@ export default function Dashboard() {
           <motion.div 
             initial={{ opacity: 0, x: -20 }} 
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-2"
+            className="flex items-center gap-0"
           >
-            <span className="text-xl">💑</span>
-            <span className="font-bold text-lg hidden sm:block tracking-tight">Couple Savings</span>
+            <span className="text-xl"><img src="/fri.png" alt="" className="w-10"/></span>
+            <span className="font-bold text-lg text-yellow-600  hidden sm:block tracking-tight">FRIN</span>
+            <span className="font-bold text-lg  text-blue-600 hidden sm:block tracking-tight">TAB</span>
           </motion.div>
 
           <div className="flex items-center gap-2 sm:gap-3">
@@ -153,7 +154,7 @@ export default function Dashboard() {
                   <DialogTitle>Buat Grup Tabungan</DialogTitle>
                 </DialogHeader>
                 <Input 
-                  placeholder="Contoh: Tabungan Nikah" 
+                  placeholder="Contoh: Tabungan Kita" 
                   value={newGroupName} 
                   onChange={(e) => setNewGroupName(e.target.value)} 
                 />
