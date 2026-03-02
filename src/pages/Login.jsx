@@ -28,7 +28,7 @@ export default function Login() {
       navigate('/dashboard');
     } catch (err) {
       // Ambil pesan error dari backend, jika tidak ada pakai pesan default
-      const errorMessage =  'Email atau password salah!';
+      const errorMessage = 'Email atau password salah!';
       setError(errorMessage);
     } finally {
       setLoading(false);
@@ -38,8 +38,10 @@ export default function Login() {
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center bg-slate-50/50 px-4">
       <div className="flex flex-col items-center mb-8 text-center">
-        <div className="w-12 h-12 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center mb-4 text-2xl">💑</div>
-        <h1 className="text-2xl font-semibold tracking-tight text-slate-900">Masuk ke Couple Savings</h1>
+        <span className="text-xl">
+          <img src="/fri.png" alt="" className="w-20" />
+        </span>
+        <h1 className="text-2xl font-semibold tracking-tight text-slate-900">Masuk ke FRINTAB</h1>
         <p className="text-sm text-muted-foreground mt-1">Masukkan email Anda untuk mengakses dashboard</p>
       </div>
 
@@ -64,7 +66,7 @@ export default function Login() {
               <Input
                 id="email"
                 type="email"
-                placeholder=""
+                placeholder="email"
                 required
                 className={`h-11 rounded-lg border-slate-200 focus-visible:ring-green-500 ${error ? 'border-red-300 bg-red-50/20' : ''}`}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -81,7 +83,7 @@ export default function Login() {
               <Input
                 id="password"
                 type="password"
-                placeholder="••••••••"
+                placeholder="password"
                 required
                 className={`h-11 rounded-lg border-slate-200 focus-visible:ring-green-500 ${error ? 'border-red-300 bg-red-50/20' : ''}`}
                 onChange={(e) => setForm({ ...form, password: e.target.value })}
@@ -122,7 +124,7 @@ export default function Login() {
         </CardFooter>
       </Card>
 
-      <p className="text-[11px] text-slate-400 mt-8 uppercase tracking-widest font-medium">&copy; 2026 Couple Savings Inc.</p>
+      <p className="text-[11px] text-slate-400 mt-8 uppercase tracking-widest font-medium">&copy; 2026 FRINTAB.</p>
     </div>
   );
 }
